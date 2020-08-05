@@ -1,0 +1,14 @@
+{% extends 'todo_app/base.html'%}
+{%block content%}
+<h2>{{task.text}}</h2>
+<h2>{{task.added_date}}</h2>
+
+<form action="{%url 'update_task' task.id %}" method="post">
+  <div class="form-group col-6 mb-12">
+    <label for="task">Task</label>
+    <input type="text" name="update_content" class="form-control" id="task" aria-describedby="taskEntry">
+    <small id="taskEntry" class="form-text text-muted">update task</small>
+      <button type="submit" class="btn btn-outline-dark">Update Task</button>
+  </div>
+</form>
+{%endblock%}

@@ -1,0 +1,22 @@
+{%extends 'todo_app/base.html'%}
+{%block content%}
+{% csrf_token %}
+<form action="{%url 'add_todo' %}" method="post">
+  <div class="form-group col-6 mb-12">
+    <label for="task">Task</label>
+    <input type="text" name="content" class="form-control" id="task" aria-describedby="taskEntry">
+    <small id="taskEntry" class="form-text text-muted">upload your tasks here.</small>
+      <button type="submit" class="btn btn-outline-dark">Upload Task</button>
+  </div>
+</form>
+  {%for task in tasks%}
+  <div class="w-50 mt-3 border border-secondary">
+      <a href="{%url 'detail_task' task.id%}"><h5 class="text-primary">{{task.text}}</h5></a>
+        <p class="text_secondary">{{task.added_date}}</p>
+        <form action="{%url 'delete_task' task.id%}" method="POST">
+            {%csrf_token%}
+            <button class="btn btn-primary">Done</button>
+        </form>
+  </div>
+    {%endfor%}
+{%endblock%}
