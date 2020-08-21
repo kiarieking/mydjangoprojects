@@ -25,7 +25,7 @@ SECRET_KEY = 'sbd@gr5pc0h275vwkeibka7qprhddcy=9_8szqo(=fi+(eol&!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kiariesite.herokuapp.com']
+ALLOWED_HOSTS = ['kiariesite.herokuapp.com','127.0.0.1']
 
 
 # Application definition
