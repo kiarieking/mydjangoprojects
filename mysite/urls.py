@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('polls.urls')),
     path('todo/', include('todo_app.urls')),
     path('img_gallery/', include('img_gallery.urls')),
+    path('users/', include('users.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='todo_app/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='todo_app/logout.html'), name='logout'),
 ]

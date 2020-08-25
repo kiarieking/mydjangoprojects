@@ -10,7 +10,7 @@
   </div>
 </form>
   {%for task in tasks%}
-  <div class="w-50 mt-3 border border-secondary">
+  <div class="w-50 mt-3 ml-5 border border-secondary">
       <a href="{%url 'detail_task' task.id%}"><h5 class="text-primary">{{task.text}}</h5></a>
         <p class="text_secondary">{{task.added_date}}</p>
         <form action="{%url 'delete_task' task.id%}" method="POST">
