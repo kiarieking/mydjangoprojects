@@ -23,7 +23,8 @@
   </div>
    <div class="float-right">
       {% if user.is_authenticated %}
-       <b class="text-light mr-2">{{ user.username }}</b>
+       <img src="media/person.jpeg" width="30" height="30">
+       <b class="text-warning mr-4">{{ user.username }}</b>
        <a href="{% url 'logout' %}" class="text-info mr-2">log out</a>
       {% else %}
         <a href="{% url 'login_user' %}">login</a>

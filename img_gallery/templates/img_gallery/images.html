@@ -14,14 +14,18 @@
 </form>
 
 {%for image in images%}
-<a href="{%url 'image_detail' image.id%}">
-    <div class="col-md-4">
-        {{image.name}}
-        <img src="{{image.image.url}}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;">
-        <form action="{% url 'delete_image' image.id%}" method="post">
-            {% csrf_token %}
-            <button class="btn btn-warning" type="submit">delete</button>
-        </form>
+   <a href="{%url 'image_detail' image.id%}">
+    <div class="container">
+    <div class="row justify-content-start">
+        <div class="col-2">
+             {{image.name}}
+             <img src="{{image.image.url}}" class="img-responsive" style="width: 100%; float: left; margin-right: 5px;">
+            <form action="{% url 'delete_image' image.id%}" method="post">
+                {% csrf_token %}
+                <button class="btn btn-danger" type="submit">delete</button>
+            </form>
+         </div>
+    </div>
     </div>
     </a>
 {% endfor %}

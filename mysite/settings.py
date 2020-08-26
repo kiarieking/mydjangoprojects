@@ -122,7 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 LOGIN_REDIRECT_URL='/todo/tasks'
-LOGOUT_REDIRECT_URL='/users/logout/'
 STATIC_URL = '/static/'
 STATICFILES_DIR = [os.path.join(BASE_DIR, "static"),
                    '/var/www/static',
